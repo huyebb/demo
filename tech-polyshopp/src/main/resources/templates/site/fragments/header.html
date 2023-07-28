@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+   </head>
+   <body>
+<header id="header" th:fragment="header">
+        <div class="shop-in">
+            <h6>TĂNG VOCHOR 15K CHO ĐƠN HÀNG 300K</h6>
+        </div>
+        <div class="logo-in">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+  
+            </div>
+            <div class="menu-in">
+                <i class="fa fa-bell"></i>
+                <a th:text="${session.username}"></a>
+                <i class="fa fa-magnifying-glass"></i>
+                
+            <a href="/admin-product-add.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="admin/accounts/add"><i class="fa fa-id-card"></i></a>    
+             <a href="alogin"><i class="fa-solid fa-user"></i></a> 
+  
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-shop">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+  
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+                    <!-- Left links -->
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="home">Trang chủ</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sản Phẩm</a>
+                        </li>
+                        <!-- Navbar dropdown -->
+                      
+                        <li class="nav-item">
+                            <a class="nav-link ">Liên Hệ</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" th:href="@{admin/products/add}">Quản lí</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+  
+  
+    </header>
+   </body>
+</html>

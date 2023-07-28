@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{site/homeSite.html}"
+  >
+ 
+  <body>    
+   <main layout:fragment="content" >
+
+
+            
+    <section id="banner">
+
+        <div class="shop-button">
+            <button>Bộ Sưu tập mới</button>
+        </div>
+
+
+    </section>
+
+    <section id="product1">
+
+
+        <div class="content">
+            <h5>SẢN PHẨM NỔI BẬT CỦA LEVENTS</h5>
+        </div>
+        <div class="pro-box">
+      
+            <div class="pro" th:each="item, iStat : ${products}">
+                <div class="pro-img">
+                <a th:href="@{'shopping/add/'+${item.productId}}">  
+         <img th:src="${item.image!= null? '/admin/products/images/' + item.image : 'images/noimage.jpg'}"
+                      src="/images/ao1.jpg" 
+                    alt="">
+                    </a>
+                </div>
+                <div class="pro=content">
+                    <h5 th:text="${item.name}"></h5>
+                    <div style="display: flex;">
+                    <p th:text="${item.unitPrice}"></p>
+                    <span>  VND</span>
+                    
+                    </div>
+
+                </div>
+            </div>
+   
+
+
+        </div>
+        <div class="product-button">
+            <button>Xem Thêm</button>
+
+        </div>
+
+
+
+    </section>
+
+    <section id="banner2">
+        <div class="content">
+            <h5>THỂ HIỆN CÁ TÍNH CÙNG LEVENTS® TRONG MÙA HÈ NÀY</h5>
+        </div>
+     
+
+
+    </section>
+    
+   
+        
+        </main>
+     
+  </body>
+</html>

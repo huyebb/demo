@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+   </head>
+   <body>
+<header id="header" th:fragment="header">
+  
+  <div class="shop-in">
+      <h6>TĂNG VOCHOR 15K CHO ĐƠN HÀNG 300K</h6>
+  </div>
+  <div class="logo-in">
+      <div class="logo">
+          <img src="images/logo.png" alt="">
+
+      </div>
+      <div class="menu-in">
+          <i class="fa fa-bell"></i>
+          <a>Các Sản Phẩm yêu thích</a>
+          <i class="fa fa-magnifying-glass"></i>
+          
+      <a href="/admin-product-add.html"><i class="fa-solid fa-bag-shopping"></i></a>
+      <a th:href="@{admin/accounts/add}"><i class="fa fa-id-card"></i></a>    
+       <a href="@{/alogin}"><i class="fa-solid fa-user"></i></a> 
+
+      </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-shop">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+          <!-- Toggle button -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+          </button>
+
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+              <!-- Left links -->
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <a class="nav-link " aria-current="page" th:href="@{home}">Trang chủ</a>
+                  </li>
+                              <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+           
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Catetory
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" th:href="@{admin/categories/add}">Add catetory</a>
+            </li>
+            <li>
+              <a class="dropdown-item" th:href="@{admin/categories/searchpaginated}">List catetory</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            
+          </ul>
+        </li>
+                  <!-- Navbar dropdown -->
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{admin/accounts/add}" >thêm mới tài khoản</a>
+                  </li>
+                   <!-- Navbar dropdown -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+           
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sản Phẩm
+          </a>
+          <!-- Dropdown menu -->
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" th:href="@{admin/products/add}">Add Sản Phẩm</a>
+            </li>
+            <li>
+              <a class="dropdown-item" th:href="@{admin/products}">List Sản Phẩm</a>
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            
+          </ul>
+        </li>
+                 
+                  <li class="nav-item">
+                    <a class="nav-link" th:href="@{admin/accounts}" >Danh sách tài khoản</a>
+                  </li>
+              </ul>
+              <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+  </nav>
+
+
+
+  
+    </header>
+   </body>
+</html>
